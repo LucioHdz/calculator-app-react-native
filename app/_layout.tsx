@@ -2,9 +2,18 @@ import { globalStyles } from '@/styles/global-styles';
 import { useFonts } from 'expo-font';
 import { Slot } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
+import * as NavigationBar from 'expo-navigation-bar';
+import { Colors } from '@/constants/Colors';
 
 const RootLayout = () => {
+  
+  
+  const isAndroid = Platform.OS === "android";
+  if (isAndroid) {
+    NavigationBar.setBackgroundColorAsync(Colors.background);
+  }
+
   const [loaded] = useFonts({
     "Open Sans": require("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf"),
   });

@@ -20,6 +20,7 @@ export const globalStyles = StyleSheet.create({
 
     calculatorResult: {
         fontSize: 40,
+        marginBottom:40,
         textAlign: "right",
         fontWeight: "300",
         color: Colors.textSecondary,
