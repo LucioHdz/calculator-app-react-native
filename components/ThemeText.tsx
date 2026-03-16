@@ -2,7 +2,7 @@ import { globalStyles } from '@/styles/global-styles'
 import { Text, TextProps } from 'react-native'
 
 interface ThemeTextProps extends TextProps {
-    children: string,
+    children: string | string[],
     variant?: "h1" | "h2",
 
 }
